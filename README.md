@@ -22,7 +22,7 @@ The following components were extracted from a UMAX Astra 1220U paper scanner:
 
 * ULN2003AN Stepper Motor Driver
 * M35SP-7 Stepper Motor
-* Metal Rod - Diameter: 10mm; Width 425.45mm
+* Linear Rail Shaft - Diameter: 10mm; Width 425.45mm
 * Timing Belt - Width: 3.175mm; Teeth: 380; Pitch: 2.032mm (MXL)
 
 #### 2.2 Software
