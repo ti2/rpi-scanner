@@ -40,7 +40,7 @@ int main(int argc, const char* argv[])
 	int length = 1380;
 	int step = 0;
 	int phase = 0;
-	uint8_t stepMode = STEP_NORMAL;
+	uint8_t stepMode = FULL_STEP;
 	uint8_t direction = ROTATE_CW;
 
 	setLaser(LASER_ON);

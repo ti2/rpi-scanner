@@ -29,9 +29,9 @@
 
 #define ROTATE_CW	0x00
 #define ROTATE_CCW	0x01
-#define STEP_NORMAL	0x00
-#define STEP_WAVE	0x02
-#define STEP_HALF	0x04
+#define FULL_STEP	0x00
+#define WAVE_STEP	0x02
+#define HALF_STEP	0x04
 
 void rotate(unsigned int steps, unsigned int speed, uint8_t flags);
 

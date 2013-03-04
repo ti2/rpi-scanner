@@ -20,7 +20,7 @@
 #include "motor.h"
 #include <wiringPi.h>
 
-static const uint8_t normalSequence[4] =
+static const uint8_t fullSequence[4] =
 {
 	0x0c,	// 1100
 	0x06,	// 0110
@@ -57,15 +57,15 @@ void rotate(unsigned int steps, unsigned int speed, uint8_t flags)
 	const uint8_t* sequence;
 	uint8_t length = 4;
 
-	if (flags & STEP_HALF)
+	if (flags & HALF_STEP)
 	{
 		sequence = halfSequence;
 		length <<= 1;
 	}
-	else if (flags & STEP_WAVE)
+	else if (flags & WAVE_STEP)
 		sequence = waveSequence;
 	else
-		sequence = normalSequence;
+		sequence = fullSequence;
 	
 	if (flags & ROTATE_CCW)
 		rotateCCW(steps, speed, sequence, length);
