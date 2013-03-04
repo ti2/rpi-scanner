@@ -1,9 +1,9 @@
-OBJS = main.o motor.o
+OBJS = main.o motor.o laser.o
 BIN = scanner.out
 
 CFLAGS += -Wall -g
 LDFLAGS += -lm -lwiringPi
-INCLUDES += -I./
+INCLUDES += -I.
 
 all: $(BIN)
 

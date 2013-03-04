@@ -17,51 +17,17 @@
  * along with rpi-scanner.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <wiringPi.h>
-#include "motor.h"
-#include "laser.h"
+#ifndef LASER_H
+#define LASER_H
 
-int main(int argc, const char* argv[])
-{
-	if (wiringPiSetup() != 0)
-	{
-		fprintf(stderr, "Failed to setup wiringPi.\n");
-		return EXIT_FAILURE;
-	}
+#include <stdint.h>
 
-	pinMode(A0_PIN, OUTPUT);
-	pinMode(A1_PIN, OUTPUT);
-	pinMode(B0_PIN, OUTPUT);
-	pinMode(B1_PIN, OUTPUT);
-	pinMode(LASER_PIN, OUTPUT);
-	
-	int length = 1380;
-	int step = 0;
-	int phase = 0;
-	uint8_t stepMode = STEP_NORMAL;
-	uint8_t direction = ROTATE_CW;
+#define LASER_OFF 0
+#define LASER_ON 1
 
-	setLaser(LASER_ON);
+#define LASER_PIN 3		// BCM 22
 
-	while (1)
-	{
-		rotate(1, 8, direction | stepMode);
+void setLaser(uint8_t state);
 
-		if (++step >= length)
-		{
-			step = 0;
-			direction = ROTATE_CCW;
+#endif // LASER_H
 
-			if (++phase == 2)
-			{
-				break;
-			}
-		}
-	}
-
-	setLaser(LASER_OFF);
-
-	return EXIT_SUCCESS;
-}
