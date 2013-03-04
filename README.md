@@ -13,7 +13,7 @@ This section contains a list of hardware components used in the creation of the 
 The following components were purchased online:
 
 * [Raspberry Pi Model B, Revision 1](http://www.raspberrypi.org/)
-* [Line Laser Diode - 5mW 650nm Red](https://w: ww.adafruit.com/products/1057)
+* [Line Laser Diode - 5mW 650nm Red](https://www.adafruit.com/products/1057)
 * [Fixed Laser Mounting Stand](https://www.adafruit.com/products/1094)
 * [L293D Dual H-Bridge Motor Driver](https://www.adafruit.com/products/807)
 * [ST-PM35 Small Stepper Motor](https://www.sparkfun.com/products/10551)
