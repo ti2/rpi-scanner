@@ -34,10 +34,26 @@ int main(int argc, const char* argv[])
 	pinMode(A1_PIN, OUTPUT);
 	pinMode(B0_PIN, OUTPUT);
 	pinMode(B1_PIN, OUTPUT);
+	
+	int length = 1380;
+	int step = 0;
+	int phase = 0;
+	uint8_t flags = ROTATE_CW | STEP_NORMAL;
 
 	while (1)
 	{
-		rotate(10, 8, ROTATE_CCW | STEP_NORMAL);
+		rotate(1, 8, flags);
+
+		if (++step >= length)
+		{
+			step = 0;
+			flags = ROTATE_CCW | STEP_NORMAL;
+
+			if (++phase == 2)
+			{
+				break;
+			}
+		}
 	}
 
 	return EXIT_SUCCESS;
