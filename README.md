@@ -1,4 +1,4 @@
-# RPi Scanner
+# RPi 3D Scanner
 
 ### 1. Overview
 
@@ -8,7 +8,7 @@ This is a project to build a 3D scanner using the Raspberry Pi.
 
 #### 2.1 Hardware
 
-This section contains a list of hardware components used in the creation of the RPi Scanner. Most of the components are generic and can be exchanged for alternatives without many tweaks to the software.
+This section contains a list of hardware components used in the creation of the RPi 3D Scanner. Most of the components are generic and can be exchanged for alternatives without many tweaks to the software.
 
 The following components were purchased online:
 
@@ -27,10 +27,10 @@ The following components were extracted from a UMAX Astra 1220U paper scanner:
 
 #### 2.2 Software
 
-RPi Scanner depends on the following libraries:
+RPi 3D Scanner depends on the following libraries:
 
 * [WiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/)
 
 ### 3. License
 
-The source code for RPi Scanner is licensed under the GNU General Public License, version 3. See [COPYING](COPYING) for details.
+The source code for RPi 3D Scanner is licensed under the GNU General Public License, version 3. See [COPYING](COPYING) for details.
